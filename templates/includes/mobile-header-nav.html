@@ -1,0 +1,43 @@
+<!-- This large block of code is for the mobile top header -->
+<ul class="nav custom-font-head text-uppercase pe-0">
+    <!-- This block of code is for the Account dropdown options -->
+    <li class="list-inline-item list-unstyled mx-0">
+        <a class="white-text nav-link" href="#" data-bs-toggle="dropdown" 
+        aria-haspopup="true" aria-expanded="false">
+            <div class="text-center d-block d-lg-none">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">Account</p>
+            </div>
+        </a>
+        <!-- This block of code is the dropdown menu for my user account options -->
+        <div class="dropdown-menu text-center border-0 w-100 p-3 rounded-0 my-0 fs-5" 
+        aria-labelledby="account-options">
+            <!-- Django if statement checking if the user is authenticated, meaning logged in and
+            will display the appropriate account links. Also another Django if statement checking 
+            to see if the logged in user is a super user meaning an admin and will display the 
+            appropriate account links. -->
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="" class="dropdown-item">Administrator</a>
+            {% endif %}
+            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            {% else %}
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            {% endif %}
+            <a href="" class="dropdown-item">About Us</a>
+            <a href="" class="dropdown-item">Contact Us</a>
+        </div>
+    </li>
+    
+    <!-- Community navigation link to message board -->
+    <li class="list-inline-item mx-auto">
+        <a class="white-text nav-link" href="">
+            <div class="text-center d-block d-lg-none">
+                <div><i class="fas fa-users fa-lg"></i></div>
+                <p class="my-0">Message Board</p>
+            </div>
+        </a>
+    </li>
+</ul>

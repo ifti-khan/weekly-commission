@@ -1,0 +1,16 @@
+<!-- My custom toast with accessibility attributes to help those with assistive technologies -->
+<div class="toast sucess-toast rounded-0 border border-success border-5 bg-white" role="alert" aria-live="assertive"
+    aria-atomic="true">
+    <!-- Toast header -->
+    <div class="toast-header custom-bg rounded-0">
+        <span class="mx-auto ps-4 custom-font-head fs-6 fw-bold text-uppercase text-spacing-2 white-text">Success</span>
+        <button type="button" class="btn btn-lg white-text custom-bg fw-bold p-1" data-bs-dismiss="toast"
+            aria-label="Close">X</button>
+    </div>
+    <!-- Toast main body -->
+    <div class="toast-body text-center">
+        <!-- Toast message -->
+        {{ message }}
+    </div>
+    {% include "includes/toasts/trolley_list_toast.html" %}
+</div>

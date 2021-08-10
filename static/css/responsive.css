@@ -1,0 +1,236 @@
+/* This media query has been added
+for the top header container located
+in all html files*/
+@media (min-width: 992px) {
+    .top-head-container {
+        padding-top: 204px;
+    }
+}
+
+/* Small Laptops */
+@media (max-width: 1024px) {
+    /* Toasts */
+    .message-container {
+        top: 205px;
+        right: 5px;
+    }
+
+    /* Top header container */
+    .top-head-container {
+        padding-top: 201px;
+    }
+
+    /* Carousel caption */
+    .carousel-caption {
+        height: calc(100vh - 450px);
+    }
+}
+
+/* This media query has been added
+for the top header container located
+in all html files */
+@media (max-width: 991px) {
+
+    /* Top header container */
+    .top-head-container {
+        padding-top: 220px;
+    }
+
+    .carousel img {
+        height: calc(94vh - 190px);
+        object-fit: cover;
+    }
+
+    /* Carousel caption */
+    .carousel-caption {
+        height: calc(100vh - 600px);
+    }
+
+    /* Toasts */
+    .message-container {
+        top: 225px;
+        right: 5px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    
+    /* Toasts */
+    .message-container {
+        top: 220px;
+        right: 5px;
+    }
+
+    /* Checkout complete page */
+    .order-hr {
+        width: 50% !important;
+    }
+
+    /* Top header container */
+    .top-head-container {
+        padding-top: 214px;
+    }
+
+    .carousel-caption {
+        bottom: 150px;
+    }
+}
+
+/* Large Smartphones */
+@media (max-width: 425px) {
+
+    /* Main Nav */
+    .nav-link {
+        font-size: 16px;
+    }
+
+    /* Main Footer */
+    .main-footer {
+        font-size: 14px;
+    }
+
+    /*Back To Top Button*/
+    #back-to-top-btn {
+        bottom: 125px;
+        right: 5px;
+    }
+
+    /* Top header container */
+    .top-head-container {
+        padding-top: 207px;
+    }
+
+    /* Index carousel captions */
+    .custom-captions,
+    .custom-captions-white {
+        font-size: 22px;
+    }
+
+    /* Carousel caption */
+    .carousel-caption {
+        height: calc(100vh - 600px);
+    }
+
+    /* Toasts */
+    .message-container {
+        top: 206px;
+        right: 0px;
+    }
+
+    .toast {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+/* Medium Smartphones */
+@media (max-width: 375px) {
+    .nav-link {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    /* Mobile Toggler */
+    .navbar-icon {
+        font-size: 26px;
+    }
+
+    /*Back To Top Button*/
+    #back-to-top-btn {
+        bottom: 120px;
+        right: 5px;
+    }
+
+    /* Top header container */
+    .top-head-container {
+        padding-top: 192px;
+    }
+
+    /* Index carousel captions */
+    .custom-captions,
+    .custom-captions-white {
+        font-size: 24px;
+    }
+
+    /* Carousel caption */
+    .carousel-caption {
+        height: calc(100vh - 600px);
+    }
+
+    /* Free delivery banner */
+    .free-delivery-ban p {
+        font-size: 12px;
+    }
+
+    .free-delivery-ban {
+        padding-bottom: 4px;
+    }
+
+    /* Trolley btn */
+    .trolley-btn {
+        margin-top: 16px !important;
+    }
+
+    /* Toasts */
+    .message-container {
+        top: 194px;
+        right: 0px;
+    }
+}
+
+/* Small Smartphones */
+@media (max-width: 320px) {
+    .nav-link {
+        padding: 0px 4px;
+        font-size: 13px;
+    }
+
+    /* Mobile Toggler */
+    .navbar-toggler {
+        padding: 4px 8px;
+    }
+
+    .navbar-icon {
+        font-size: 24px;
+    }
+
+    /*Back To Top Button*/
+    #back-to-top-btn {
+        bottom: 115px;
+        right: 5px;
+    }
+
+    /* Top header container */
+    .top-head-container {
+        padding-top: 188px;
+    }
+
+    /* Free delivery banner */
+    .free-delivery-ban p {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .free-delivery-ban {
+        padding-bottom: 4px;
+    }
+
+    /* Toasts */
+    .message-container {
+        top: 188px;
+        right: 0px;
+    }
+
+    /* Checkout Complete btn */
+    .checkout-complete-btn {
+        margin-top: 16px;
+    }
+
+    /* Carousel caption */
+    .carousel-caption {
+        height: calc(100vh - 600px);
+    }
+
+}
