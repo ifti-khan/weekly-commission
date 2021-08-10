@@ -60,7 +60,7 @@
         <div class="row">
         <!-- This block of code is for the contact and about us navigation links
         that will only appear on larger screen sizes -->
-            <div class="col-6 contact-about-nav text-end px-3 d-none d-lg-block">
+            <div class="col-12 contact-about-nav text-end px-3 d-none d-lg-block">
                 <!-- Contact us nav link -->
                 <li class="list-inline-item">
                     <a href="" class="nav-link black-text custom-font-head 
@@ -78,14 +78,14 @@
         <!-- Main header -->
         <div id="header-nav" class="row d-none d-lg-flex">
             <!-- This block of code is for the site logo which is also a home anchor link -->
-            <div class="col-12 col-lg-4 text-center text-lg-start my-auto py-1 py-lg-4">
+            <div class="col-12 col-lg-6 text-center text-lg-start my-auto py-1 py-lg-4">
                 <a href="{% url 'home' %}" class="nav-link">
                     <h1 class="white-text my-0 custom-font-head text-uppercase site-logo">Goldline weekly commission</h1>
                 </a>
             </div>
 
             <!-- This block of code is for the top header links -->
-            <div class="col-12 col-lg-4 my-auto">
+            <div class="col-12 col-lg-6 my-auto">
                 <ul class="nav custom-font-head text-uppercase justify-content-center justify-content-lg-end">
                     <!-- Account dropdown-->
                     <li class="list-inline-item dropdown mx-0">
@@ -100,13 +100,12 @@
                         <div class="dropdown-menu border-0 text-center rounded-0" aria-labelledby="account-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Administrator</a>
+                            <a href="{% url 'admin:index' %}" class="dropdown-item">Admin</a>
                             {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="" class="dropdown-item">Logout</a>
+                            <a href="" class="dropdown-item">Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
-                            <a href="" class="dropdown-item">Login</a>
-                            <a href="" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>

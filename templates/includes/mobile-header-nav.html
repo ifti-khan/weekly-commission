@@ -18,13 +18,12 @@
             appropriate account links. -->
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-            <a href="" class="dropdown-item">Administrator</a>
+            <a href="{% url 'admin:index' %}" class="dropdown-item">Administrator</a>
             {% endif %}
-            <a href="" class="dropdown-item">My Profile</a>
+            <a href="" class="dropdown-item">Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
             {% else %}
             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
             {% endif %}
             <a href="" class="dropdown-item">About Us</a>
             <a href="" class="dropdown-item">Contact Us</a>

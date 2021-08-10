@@ -65,6 +65,11 @@ INSTALLED_APPS = [
 
     # My apps
     'home',
+
+    # Other
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'storages',
 ]
 
 MIDDLEWARE = [

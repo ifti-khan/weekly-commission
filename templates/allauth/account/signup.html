@@ -5,6 +5,7 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block inner_content %}
+{% if request.user.is_superuser %}
 <h2 class="custom-font-head fw-bold text-uppercase text-spacing mt-5">{% trans "Register" %}</h2>
 <hr>
 
@@ -19,5 +20,11 @@
   <a class="btn btn-outline-dark rounded-0" href="{% url 'account_login' %}">Back to Login</a>
   <button type="submit" class="btn btn-dark custom-bg rounded-0">{% trans "Register" %}</button>
 </form>
-
+{% else %}
+<div class="text-center pt-5">
+<h1 class="custom-font-head text-uppercase site-logo">Access Denied</h1>
+<p class="my-3">You do not have access to this page, please return to the home page</p>
+<a class="btn btn-outline-dark rounded-0 allauth-home-btn" href="{% url 'home' %}">Home</a>
+</div>
+{% endif %}
 {% endblock %}
